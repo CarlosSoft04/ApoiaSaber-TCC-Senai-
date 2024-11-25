@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'; // Importar os ícones necessários
+import { faGoogle, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import "./App.css"; // Arquivo de estilos
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'; // Importando o React Router
+import TelaProfessor from './components/telaProfessor'; // Importando o componente TelaProfessor
 
 function App() {
   const [isSignUp, setIsSignUp] = useState(true);
 
+  const navigate = useNavigate(); // Hook de navegação
+
   const handleToggle = () => {
     setIsSignUp(!isSignUp);
   };
+
+  const handleSignin = () => {
+    navigate('/telaProfessor'); // Navegação para a tela do professor
+  }
 
   return (
     <div className={`container ${isSignUp ? 'active' : ''}`} id="container">
@@ -61,7 +69,7 @@ function App() {
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Senha" />
             <a href="#">Esqueci minha senha</a>
-            <button type="submit">Entrar</button>
+            <button type="button" onClick={handleSignin}>Entrar</button>
           </form>
         </div>
       )}
@@ -70,7 +78,7 @@ function App() {
       <div className="toggle-container">
         <div className="toggle">
           <div className="toggle-panel toggle-left">
-            <h1>Bem vindo de volta!</h1>
+            <h1>Bem-vindo de volta!</h1>
             <p>Acesse sua conta agora mesmo e acesse o <strong>ApoiaSaber</strong> </p>
             <button className="hidden" onClick={handleToggle}>Entrar</button>
           </div>
@@ -86,4 +94,14 @@ function App() {
   );
 }
 
-export default App;
+// Componente App renderizado dentro do Router com as rotas
+export default function AppWithRouter() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} /> {/* A rota principal que renderiza o App */}
+        <Route path="/telaProfessor" element={<TelaProfessor />} /> {/* Rota para a tela do Professor */}
+      </Routes>
+    </Router>
+  );
+}
