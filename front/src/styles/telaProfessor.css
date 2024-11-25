@@ -1,0 +1,120 @@
+/* Resetando margens e preenchimento padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configurações gerais da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Menu (NavBar) */
+.menu {
+  background-color: #004279;
+  padding: 20px 50px; /* Distanciamento da margem superior e do lado */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Alinha os itens à direita */
+  gap: 30px; /* Espaçamento entre os itens */
+  margin: 0;
+}
+
+.nav-list li {
+  padding: 10px 0; /* Espaçamento vertical entre os itens */
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #ffcc00; /* Mudança de cor ao passar o mouse */
+}
+
+/* Seção Hero (Imagem e texto lado a lado) */
+.hero {
+  margin-top: 140px; /* Distância da margem superior para dar espaço ao menu fixo */
+  display: flex; /* Usando Flexbox para alinhar a imagem e o texto lado a lado */
+  padding: 0 20px; /* Afastamento lateral */
+}
+
+.hero-image {
+  flex-shrink: 0; /* Impede que a imagem encolha */
+  margin-left: 20px; /* Afastamento da imagem da margem esquerda da tela */
+}
+
+.hero img {
+  width: 350px; /* Aumentando o tamanho da imagem */
+  height: auto;
+  border-radius: 10px; /* Bordas arredondadas para a imagem */
+}
+
+.hero-text {
+  margin-left: 30px; /* Afastamento entre a imagem e o texto */
+  max-width: 600px; /* Limita a largura do texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinha o texto no centro verticalmente */
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Seção de Conteúdo sem Card */
+.content {
+  padding: 40px;
+  text-align: center;
+  background-color: white;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+  display: flex;
+  align-items: first baseline;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Rodapé */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: transparent;
+  color: rgb(49, 49, 49);
+  margin-top: 40px;
+}
+
+.footer p {
+  font-size: 1rem;
+}
