@@ -7,6 +7,8 @@ import TelaProfessor from './components/telaProfessor'; // Importando o componen
 // Tela do professor
 import CadastrarAluno from './components/cadastrar-aluno'; 
 import Atividades from './/components/atividades';
+import Relatorios from './components/relatorios'
+import Mensagens from './components/mensagens'
 
 function App() {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -106,6 +108,8 @@ export default function AppWithRouter() {
         <Route path="/telaProfessor" element={<TelaProfessor />} /> {/* Rota para a tela do professor */}
         <Route path="/cadastrar-aluno" element={<CadastrarAluno />} />
         <Route path="/atividades" element={<Atividades />} />
+        <Route path="/relatorios" element={<Relatorios />} />
+        <Route path="/mensagens" element={<Mensagens />} />
 
         
       </Routes>
