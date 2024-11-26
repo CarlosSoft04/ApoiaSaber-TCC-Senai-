@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Para navegação entre as rotas
+import { Link } from "react-router-dom";
 import "../styles/atividades.css"; // Estilos para a tela de atividades
-import imgTeach from '../assets/teacher.jpg'; // Imagem de exemplo
 
 const CadastroAtividade = () => {
   const [titulo, setTitulo] = useState("");
@@ -31,8 +30,7 @@ const CadastroAtividade = () => {
   };
 
   return (
-    <div className="App">
-      {/* Seção de Menu (NavBar) */}
+    <div className="cadastro-atividade"> {/* Classe específica para isolar os estilos */}
       <header className="menu">
         <nav>
           <ul className="nav-list">
@@ -44,9 +42,6 @@ const CadastroAtividade = () => {
           </ul>
         </nav>
       </header>
-
-      {/* Seção Hero (Imagem e texto lado a lado) */}
-      
 
       {/* Formulário de Cadastro de Atividade */}
       <div className="form-container">
@@ -122,7 +117,7 @@ const CadastroAtividade = () => {
       </div>
 
       {/* Rodapé */}
-      <footer className="footer">
+      <footer className="cadastro-footer">
         <p>&copy; 2024 Todos os direitos reservados</p>
       </footer>
     </div>
