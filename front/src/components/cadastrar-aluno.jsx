@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/cadastrar-aluno.css'; // Você pode manter o estilo ou adicionar novos para a tela de cadastro
+import '../styles/cadastrar-aluno.css'; // Certifique-se de que o CSS está sendo importado corretamente
 
 function TelaCadastrarAluno() {
   // Estado para armazenar as informações do aluno
@@ -31,7 +30,7 @@ function TelaCadastrarAluno() {
   };
 
   return (
-    <div className="App">
+    <div className="cadastrar-aluno"> {/* Adicionando a classe específica para isolar os estilos */}
       {/* Seção de Menu (NavBar) */}
       <header className="menu">
         <nav>
@@ -41,7 +40,7 @@ function TelaCadastrarAluno() {
             <li><Link to="/atividades">Atividades</Link></li>
             <li><Link to="/turmas">Turmas</Link></li>
             <li><Link to="/relatorios">Relatórios</Link></li>
-            <li><Link to="/menu">Menu</Link></li> {/* Novo item no menu */}
+            <li><Link to="/menu">Menu</Link></li>
           </ul>
         </nav>
       </header>
@@ -50,7 +49,6 @@ function TelaCadastrarAluno() {
       <section className="content">
         <h2>Cadastrar Novo Aluno</h2>
         <form onSubmit={handleSubmit}>
-          {/* Campo Nome Completo */}
           <label htmlFor="nome">Nome Completo:</label>
           <input
             type="text"
@@ -60,7 +58,6 @@ function TelaCadastrarAluno() {
             onChange={(e) => setNome(e.target.value)}
           />
 
-          {/* Campo E-mail */}
           <label htmlFor="email">E-mail:</label>
           <input
             type="email"
@@ -70,7 +67,6 @@ function TelaCadastrarAluno() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          {/* Campo Telefone */}
           <label htmlFor="telefone">Telefone:</label>
           <input
             type="tel"
@@ -80,7 +76,6 @@ function TelaCadastrarAluno() {
             onChange={(e) => setTelefone(e.target.value)}
           />
 
-          {/* Campo Sexo */}
           <label>Sexo:</label>
           <div>
             <input
@@ -101,7 +96,6 @@ function TelaCadastrarAluno() {
             <label htmlFor="sexo-feminino">Feminino</label>
           </div>
 
-          {/* Campo Turma */}
           <label>Turma:</label>
           <div>
             <input
@@ -130,7 +124,6 @@ function TelaCadastrarAluno() {
             <label htmlFor="turma-c">Turma C</label>
           </div>
 
-          {/* Campo de Imagem */}
           <label htmlFor="imagem">Imagem do Aluno:</label>
           <input
             type="file"
@@ -138,28 +131,24 @@ function TelaCadastrarAluno() {
             onChange={handleImagemChange}
           />
 
-          {/* Botões de Ação */}
           <div className="buttons">
             <button type="submit">Criar</button>
             <button type="button">Excluir</button>
           </div>
         </form>
 
-        {/* Filtro de Pesquisa */}
         <div className="search">
           <label htmlFor="search">Pesquisar Aluno:</label>
           <input type="text" id="search" placeholder="Digite o nome do aluno" />
         </div>
       </section>
 
-      {/* Botão no canto direito inferior */}
       <div className="visualizar-turmas">
         <Link to="/turmas">
           <button>Visualizar Turmas e Alunos</button>
         </Link>
       </div>
 
-      {/* Footer */}
       <footer className="footer">
         <p>&copy; 2024 Todos os direitos reservados</p>
       </footer>
@@ -168,4 +157,3 @@ function TelaCadastrarAluno() {
 }
 
 export default TelaCadastrarAluno;
-
