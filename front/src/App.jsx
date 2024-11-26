@@ -4,6 +4,9 @@ import { faGoogle, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free
 import "./App.css"; // Arquivo de estilos
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'; // Importando o React Router
 import TelaProfessor from './components/telaProfessor'; // Importando o componente TelaProfessor
+// Tela do professor
+import CadastrarAluno from './components/cadastrar-aluno'; 
+import Atividades from './/components/atividades';
 
 function App() {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -99,8 +102,12 @@ export default function AppWithRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<App />} /> {/* A rota principal que renderiza o App */}
-        <Route path="/telaProfessor" element={<TelaProfessor />} /> {/* Rota para a tela do Professor */}
+        <Route path="/" element={<App />} /> {/* Rota principal */}
+        <Route path="/telaProfessor" element={<TelaProfessor />} /> {/* Rota para a tela do professor */}
+        <Route path="/cadastrar-aluno" element={<CadastrarAluno />} />
+        <Route path="/atividades" element={<Atividades />} />
+
+        
       </Routes>
     </Router>
   );
