@@ -1,0 +1,101 @@
+/* Chat */
+.chat-container {
+    background-color: #f1f1f1;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+  
+  .header-chat {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .mensagens {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .mensagem {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .professor {
+    background-color: #d1f7d6;
+    text-align: left;
+  }
+  
+  .aluno {
+    background-color: #e1e1e1;
+    text-align: right;
+  }
+  
+  .input-chat {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-chat input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-chat button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .input-chat button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Nova Conversa */
+  .nova-conversa-container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .iniciar-conversa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .iniciar-conversa select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .iniciar-conversa button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .iniciar-conversa button:hover {
+    background-color: #45a049;
+  }
+  
