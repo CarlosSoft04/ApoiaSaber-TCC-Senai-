@@ -35,7 +35,7 @@ function TelaCadastrarAluno() {
       <header className="menu">
         <nav>
           <ul className="nav-list">
-            <li><Link to="/mensagens">Mensagens</Link></li>
+          
             <Link to="/cadastrar-aluno">Cadastrar Aluno</Link>
             <li><Link to="/atividades">Atividades</Link></li>
             <li><Link to="/turmas">Turmas</Link></li>
@@ -143,11 +143,12 @@ function TelaCadastrarAluno() {
         </div>
       </section>
 
-      <div className="visualizar-turmas">
+    {/**<div className="visualizar-turmas">
         <Link to="/turmas">
           <button>Visualizar Turmas e Alunos</button>
         </Link>
-      </div>
+      </div> */}
+      
 
       <footer className="footer">
         <p>&copy; 2024 Todos os direitos reservados</p>

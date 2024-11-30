@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
+import AppWithRouter from './App';  // Importando a versão com Router
 
 ReactDOM.render(
-  <App />,  // O App é renderizado diretamente aqui sem Router
+  <AppWithRouter />,  // Renderizando o AppWithRouter que contém as rotas
   document.getElementById('root')
 );

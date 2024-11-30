@@ -34,10 +34,8 @@ const CadastroAtividade = () => {
       <header className="menu">
         <nav>
           <ul className="nav-list">
-            <li><Link to="/mensagens">Mensagens</Link></li>
             <li><Link to="/cadastrar-aluno">Cadastrar Aluno</Link></li>
             <li><Link to="/atividades">Atividades</Link></li>
-            <li><Link to="/turmas">Turmas</Link></li>
             <li><Link to="/relatorios">Relatórios</Link></li>
           </ul>
         </nav>

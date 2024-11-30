@@ -1,27 +1,30 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import "./App.css"; // Arquivo de estilos
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'; // Importando o React Router
-import TelaProfessor from './components/telaProfessor'; // Importando o componente TelaProfessor
-// Tela do professor
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import './App.css'; // Arquivo de estilos
+
+// Importando os componentes para as telas e funcionalidades específicas
+import TelaProfessor from './components/telaProfessor'; 
 import CadastrarAluno from './components/cadastrar-aluno'; 
-import Atividades from './/components/atividades';
-import Relatorios from './components/relatorios'
-import Mensagens from './components/mensagens'
+import Atividades from './components/atividades'; 
+import Relatorios from './components/relatorios'; 
 
+import TelaAluno from './components/telaAluno'; // Importe a TelaAluno
+import AtividadesAluno from "./components/atividadesAluno";
+
+// Componente principal (App)
 function App() {
-  const [isSignUp, setIsSignUp] = useState(true);
-
-  const navigate = useNavigate(); // Hook de navegação
+  const [isSignUp, setIsSignUp] = useState(true); 
+  const navigate = useNavigate();
 
   const handleToggle = () => {
-    setIsSignUp(!isSignUp);
+    setIsSignUp(!isSignUp); 
   };
 
   const handleSignin = () => {
-    navigate('/telaProfessor'); // Navegação para a tela do professor
-  }
+    navigate('/telaProfessor');
+  };
 
   return (
     <div className={`container ${isSignUp ? 'active' : ''}`} id="container">
@@ -31,18 +34,10 @@ function App() {
           <form>
             <h1>Criar conta</h1>
             <div className="social-icons">
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faGoogle} />
-              </a>
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faGoogle} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faFacebookF} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </div>
             <span>ou use o email para se registrar</span>
             <input type="text" placeholder="Name" />
@@ -57,18 +52,10 @@ function App() {
           <form>
             <h1>Entrar</h1>
             <div className="social-icons">
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faGoogle} />
-              </a>
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a href="#" className="icon">
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faGoogle} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faFacebookF} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faGithub} /></a>
+              <a href="#" className="icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </div>
             <span>ou use a senha do seu email</span>
             <input type="email" placeholder="Email" />
@@ -99,19 +86,18 @@ function App() {
   );
 }
 
-// Componente App renderizado dentro do Router com as rotas
+// Componente AppWithRouter para configurar as rotas
 export default function AppWithRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<App />} /> {/* Rota principal */}
+        <Route path="/" element={<App />} /> {/* Rota principal para login/cadastro */}
         <Route path="/telaProfessor" element={<TelaProfessor />} /> {/* Rota para a tela do professor */}
-        <Route path="/cadastrar-aluno" element={<CadastrarAluno />} />
-        <Route path="/atividades" element={<Atividades />} />
-        <Route path="/relatorios" element={<Relatorios />} />
-        <Route path="/mensagens" element={<Mensagens />} />
-
-        
+        <Route path="/cadastrar-aluno" element={<CadastrarAluno />} /> {/* Rota para cadastro do aluno */}
+        <Route path="/atividades" element={<Atividades />} /> {/* Rota para atividades */}
+        <Route path="/relatorios" element={<Relatorios />} /> {/* Rota para relatórios */}
+        <Route path="/telaAluno" element={<TelaAluno />} /> {/* Rota para a tela do aluno */}
+        <Route path="/atividadesAlunos" element={<AtividadesAluno />} /> {/* Rota para a tela do aluno */}
       </Routes>
     </Router>
   );
