@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaUserPlus, FaTasks, FaFileAlt, FaHome } from "react-icons/fa"; // Importando o ícone de casinha (Home)
 import "../../styles/Professor.css/atividades.css"; // Estilos para a tela de atividades
 
 const CadastroAtividade = () => {
@@ -34,9 +35,10 @@ const CadastroAtividade = () => {
       <header className="menu">
         <nav>
           <ul className="nav-list">
-            <li><Link to="/cadastrar-aluno">Cadastrar Aluno</Link></li>
-            <li><Link to="/atividades">Atividades</Link></li>
-            <li><Link to="/relatorios">Relatórios</Link></li>
+            <li><Link to="/cadastrar-aluno"><FaUserPlus /> Cadastrar Aluno</Link></li> {/* Ícone de "Adicionar Usuário" */}
+            <li><Link to="/atividades"><FaTasks /> Atividades</Link></li> {/* Ícone de "Tarefas" */}
+            <li><Link to="/relatorios"><FaFileAlt /> Relatórios</Link></li> {/* Ícone de "Relatório" */}
+            <li><Link to="/telaProfessor"><FaHome /> Principal</Link></li> {/* Ícone de "Home" ou "Principal" */}
           </ul>
         </nav>
       </header>
