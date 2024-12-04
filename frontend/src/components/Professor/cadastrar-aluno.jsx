@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Professor.css/cadastrar-aluno.css'; // Certifique-se de que o CSS está sendo importado corretamente
 
+// Importando os ícones do react-icons
+import { FaUserPlus, FaSearch, FaTrashAlt, FaBook, FaFileAlt, FaHome } from 'react-icons/fa';
+
 function TelaCadastrarAluno() {
   // Estado para armazenar as informações do aluno
   const [nome, setNome] = useState('');
@@ -30,17 +33,31 @@ function TelaCadastrarAluno() {
   };
 
   return (
-    <div className="cadastrar-aluno"> {/* Adicionando a classe específica para isolar os estilos */}
+    <div className="cadastrar-aluno">
       {/* Seção de Menu (NavBar) */}
       <header className="menu">
         <nav>
           <ul className="nav-list">
-          
-            <Link to="/cadastrar-aluno">Cadastrar Aluno</Link>
-            <li><Link to="/atividades">Atividades</Link></li>
-            <li><Link to="/turmas">Turmas</Link></li>
-            <li><Link to="/relatorios">Relatórios</Link></li>
-            <li><Link to="/menu">Menu</Link></li>
+            <li>
+              <Link to="/cadastrar-aluno">
+                <FaUserPlus /> Cadastrar Aluno
+              </Link>
+            </li>
+            <li>
+              <Link to="/atividades">
+                <FaBook /> Atividades
+              </Link>
+            </li>
+            <li>
+              <Link to="/relatorios">
+                <FaFileAlt /> Relatórios
+              </Link>
+            </li>
+            <li>
+              <Link to="/telaProfessor">
+                <FaHome /> Principal
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -132,23 +149,22 @@ function TelaCadastrarAluno() {
           />
 
           <div className="buttons">
-            <button type="submit">Criar</button>
-            <button type="button">Excluir</button>
+            <button type="submit">
+              <FaUserPlus /> Criar
+            </button>
+            <button type="button">
+              <FaTrashAlt /> Excluir
+            </button>
           </div>
         </form>
 
         <div className="search">
-          <label htmlFor="search">Pesquisar Aluno:</label>
+          <label htmlFor="search">
+            <FaSearch /> Pesquisar Aluno:
+          </label>
           <input type="text" id="search" placeholder="Digite o nome do aluno" />
         </div>
       </section>
-
-    {/**<div className="visualizar-turmas">
-        <Link to="/turmas">
-          <button>Visualizar Turmas e Alunos</button>
-        </Link>
-      </div> */}
-      
 
       <footer className="footer">
         <p>&copy; 2024 Todos os direitos reservados</p>

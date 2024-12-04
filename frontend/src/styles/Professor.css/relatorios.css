@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    /* Adicione seu estilo global aqui, se necessário */
+  }
+  
+  .conttainer {
+    height: 500px;
+    width: 1000px;
+    /*background-color: rgb(203, 53, 53);**/
+  }
+  
+  .area-selecionada {
+    /*background-color: green;*/
+    padding: 10px;
+  }
+  
+  .performance__area {
+    width: 1000px;
+    height: 400px;
+    /* background-color: yellow; */
+  }
+  
+  .escolha_turma,
+  .escolha_aluno {
+    font-size: 14px;
+  }
+  
+  .relatorio_desempenho {
+    margin-left: 10px;
+  }
+  
+  /* Container do gráfico */
+  .chart__container {
+    margin-top: 30px;
+    width: 100%; /* Define a largura do container como 100% da largura do elemento pai */
+    max-height: 350px; /* Ajuste aqui a altura máxima do gráfico. Isso limita a altura do gráfico para 300px */
+    background-color: #fff; /* Define a cor de fundo como branco */
+    border-radius: 8px; /* Aplica bordas arredondadas no container */
+    padding: 10px; /* Adiciona um espaçamento interno de 10px ao redor do conteúdo do container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aplica uma sombra sutil ao redor do container */
+    display: flex; /* Usa o modelo de layout flexível para o container */
+    justify-content: center; /* Centraliza o gráfico horizontalmente dentro do container */
+    overflow-y: auto; /* Permite rolagem vertical caso o conteúdo do gráfico ultrapasse o tamanho máximo do container */
+  }
+  

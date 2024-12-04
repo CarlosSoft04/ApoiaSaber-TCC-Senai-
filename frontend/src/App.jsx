@@ -40,9 +40,9 @@ function App() {
               <a href="#" className="icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </div>
             <span style={{ fontSize: '18px' }}>ou use o email para se registrar</span>
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Nome" />
             <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Senha" />
             <button type="submit">Cadastrar</button>
           </form>
         </div>

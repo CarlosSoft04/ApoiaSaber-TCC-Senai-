@@ -1,202 +1,148 @@
-/* Resetando margens e preenchimento padrões */
-.cadastrar-aluno * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Menu (NavBar) */
-.cadastrar-aluno .menu {
-  background-color: #004279; /* Cor de fundo do menu */
-  padding: 20px 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.cadastrar-aluno .nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 30px;
-  margin: 0;
-}
-
-.cadastrar-aluno .nav-list li {
-  padding: 10px 0;
-}
-
-.cadastrar-aluno .nav-list li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.cadastrar-aluno .nav-list li a:hover {
-  color: #ffcc00;
-}
-
-/* Seção de Formulário */
+/* Estilização para a seção de formulário */
 .cadastrar-aluno .content {
-  padding: 60px 20px 20px; /* Distância para o menu fixo */
-  text-align: center;
-  background-color: white;
+  padding: 40px; /* Aumentando o espaçamento interno */
+  background-color: #ffffff; /* Cor de fundo branca */
   margin-top: 140px; /* Para não sobrepor o menu fixo */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
   width: 100%;
-  max-width: 1000px; /* Limite de largura do formulário */
+  max-width: 500px; /* Limite de largura do formulário */
   margin: auto; /* Centraliza o conteúdo */
 }
 
+/* Estilização do título do formulário */
 .cadastrar-aluno .content h2 {
-  color: #004279;
-  margin-bottom: 20px;
-  font-size: 24px;
+  color: #004279; /* Cor do título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
+/* Estilização do formulário */
 .cadastrar-aluno form {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Coloca os campos em coluna */
   gap: 15px; /* Espaçamento entre os campos do formulário */
-  align-items: flex-start;
   width: 100%;
 }
 
-/* Estilização dos labels e inputs */
+/* Estilização dos labels */
 .cadastrar-aluno label {
-  font-weight: bold;
-  width: 100%;
-  margin-bottom: 5px;
+  font-weight: bold; /* Deixa o texto em negrito */
+  color: #333; /* Cor do texto */
 }
 
+/* Estilização dos campos de entrada */
 .cadastrar-aluno input[type="text"],
 .cadastrar-aluno input[type="email"],
 .cadastrar-aluno input[type="tel"],
 .cadastrar-aluno input[type="file"],
 .cadastrar-aluno input[type="radio"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 100%;
+  padding: 10px; /* Espaçamento interno dos campos */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  width: 100%; /* Largura total */
+  transition: border-color 0.3s; /* Transição suave para a cor da borda */
 }
 
-.cadastrar-aluno input[type="radio"] {
-  width: auto;
+.cadastrar-aluno input[type="text"]:focus,
+.cadastrar-aluno input[type="email"]:focus,
+.cadastrar-aluno input[type="tel"]:focus {
+  border-color: #004279; /* Cor da borda ao focar no campo */
 }
 
-.cadastrar-aluno .buttons {
-  display: flex;
-  gap: 15px; /* Espaço entre os botões */
-  width: 100%;
-  justify-content: space-between;
-}
-
+/* Estilização dos botões */
 .cadastrar-aluno button {
-  padding: 10px 20px;
-  background-color: #004279;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  flex: 1; /* Faz com que os botões ocupem 50% cada um */
+  padding: 10px 20px; /* Espaçamento interno dos botões */
+  background-color: #004279; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  flex: 1; /* Faz com que os botões ocupem espaço igual */
 }
 
 .cadastrar-aluno button:hover {
-  background-color: #003156;
+  background-color: #003156; /* Cor do botão ao passar o mouse */
 }
 
 .cadastrar-aluno button[type="button"] {
-  background-color: #f44336;
+  background-color: #f44336; /* Cor do botão de excluir */
 }
 
 .cadastrar-aluno button[type="button"]:hover {
-  background-color: #e53935;
+  background-color: #e53935; /* Cor do botão de excluir ao passar o mouse */
 }
 
-/* Pesquisa de Aluno */
+/* Estilização do campo de pesquisa */
 .cadastrar-aluno .search {
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 20px; /* Espaço acima do campo de pesquisa */
+  text-align: center; /* Centraliza o conteúdo */
 }
 
 .cadastrar-aluno .search input {
-  padding: 10px;
-  width: 100%;
-  max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px; /* Espaçamento interno do campo de pesquisa */
+  width: 100%; /* Largura total */
+  max-width: 300px; /* Limite de largura */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: border-color 0.3s; /* Transição suave para a cor da borda */
+}
+
+.cadastrar-aluno .search input:focus {
+  border-color: #004279; /* Cor da borda ao focar no campo de pesquisa */
 }
 
 /* Visualizar Turmas */
 .cadastrar-aluno .visualizar-turmas {
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  justify-content: center; /* Centraliza os botões */
+  margin-top: 30px; /* Espaço acima dos botões */
 }
 
 .cadastrar-aluno .visualizar-turmas button {
-  padding: 10px 20px;
-  background-color: #004279;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 10px 20px; /* Espaçamento interno dos botões */
+  background-color: #004279; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
 
 .cadastrar-aluno .visualizar-turmas button:hover {
-  background-color: #003156;
-}
-
-/* Rodapé */
-.cadastrar-aluno .footer {
-  background-color: #004279;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.cadastrar-aluno .footer p {
-  margin: 0;
-  font-size: 1rem;
+  background-color: #003156; /* Cor do botão ao passar o mouse */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
   .cadastrar-aluno .content {
-    padding: 20px;
-    margin-top: 120px;
-    max-width: none;
+    padding: 20px; /* Reduz o padding em telas menores */
+    margin-top: 120px; /* Ajusta a margem superior */
+    max-width: none; /* Remove o limite de largura */
   }
 
   .cadastrar-aluno form {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Coloca os campos em coluna */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
   }
 
   .cadastrar-aluno .buttons {
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column; /* Coloca os botões em coluna */
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px; /* Espaço entre os botões */
   }
 
   .cadastrar-aluno button {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 100%; /* Botões ocupam a largura total */
+    margin-bottom: 10px; /* Espaço abaixo do botão */
   }
 
   .cadastrar-aluno .visualizar-turmas {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Coloca os botões em coluna */
+    gap: 10px; /* Espaço entre os botões */
   }
 
   .cadastrar-aluno .visualizar-turmas button {
-    width: 100%;
+    width: 100%; /* Botões ocupam a largura total */
   }
 }
