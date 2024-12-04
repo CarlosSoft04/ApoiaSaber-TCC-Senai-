@@ -1,0 +1,97 @@
+/* Estilização geral */
+.cadastro-atividade {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 20px; /* Espaçamento interno */
+  background-color: #f9f9f9; /* Cor de fundo clara */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+/* Estilização do cabeçalho */
+.menu {
+  background-color: #004279; /* Cor de fundo do menu */
+  padding: 10px 20px; /* Espaçamento interno do menu */
+  color: white; /* Cor do texto do menu */
+}
+
+.nav-list {
+  list-style: none; /* Remove a lista padrão */
+  display: flex; /* Exibe os itens em linha */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.nav-list li {
+  padding: 5px 10px; /* Espaçamento interno dos itens */
+}
+
+.nav-list li a {
+  color: white; /* Cor do texto dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.nav-list li a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+/* Estilização do formulário */
+.form-container {
+  margin: 20px 0; /* Espaçamento acima e abaixo do formulário */
+  padding: 20px; /* Espaçamento interno do formulário */
+  background-color: #ffffff; /* Cor de fundo do formulário */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Espaçamento abaixo de cada grupo de formulário */
+}
+
+.form-group label {
+  display: block; /* Faz o label ocupar toda a linha */
+  margin-bottom: 5px; /* Espaçamento abaixo do label */
+  font-weight: bold; /* Negrito para o texto do label */
+  color: #333; /* Cor do texto do label */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; /* Largura total */
+  padding: 10px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  transition: border-color 0.3s; /* Efeito de transição para a cor da borda */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #004279; /* Borda azul ao focar no campo */
+}
+
+/* Estilização do botão */
+.form-group button {
+  padding: 10px 15px; /* Espaçamento interno do botão */
+  background-color: #004279; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: background-color 0.3s; /* Efeito de transição para a cor de fundo */
+}
+
+.form-group button:hover {
+  background-color: #003156; /* Cor ao passar o mouse */
+}
+
+/* Estilização do rodapé */
+.cadastro-footer {
+  text-align: center; /* Centraliza o texto */
+  padding: 10px 0; /* Espaçamento interno */
+  color: #777; /* Cor do texto do rodapé */
+  background-color: #f1f1f1; /* Cor de fundo do rodapé */
+  position: relative; /* Para garantir que não se sobreponha ao conteúdo */
+  margin-top: 20px; /* Espaçamento acima do rodapé */
+}
