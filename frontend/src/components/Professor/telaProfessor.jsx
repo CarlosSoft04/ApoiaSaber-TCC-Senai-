@@ -1,13 +1,14 @@
 import React from "react";
-import { Route, Routes, Link } from "react-router-dom"; // Remover o Router aqui
-import '../../styles/Professor.css/telaProfessor.css'; 
-import imgTeach from '../../assets/teacher.jpg'; // Importando a imagem corretamente
+import { Route, Routes, Link } from "react-router-dom";
+import "../../styles/Professor.css/telaProfessor.css";
+import imgTeach from "../../assets/teacher.jpg"; // Importando a imagem corretamente
 
+import CadastrarAluno from "../Professor/cadastrar-aluno";
+import Atividades from "../Professor/atividades"; 
+import Relatorios from "../Professor/relatorios"; 
 
-import CadastrarAluno from '../Professor/cadastrar-aluno';
-import Atividades from '../Professor/atividades';  // Importando corretamente o componente Atividades
-//import Turmas from '../components/turmas';          // Importando corretamente o componente Turmas
-import Relatorios from '../Professor/relatorios';  // Importando corretamente o componente Relatorios
+// Importando os ícones do react-icons
+import { FaUserPlus, FaBook, FaFileAlt } from "react-icons/fa";
 
 function TelaProfessor() {
   return (
@@ -16,10 +17,22 @@ function TelaProfessor() {
       <header className="menu">
         <nav>
           <ul className="nav-list">
-            <li><Link to="/cadastrar-aluno">Cadastrar Aluno</Link></li>
-            <li><Link to="/atividades">Atividades</Link></li>
-          
-            <li><Link to="/relatorios">Relatórios</Link></li>
+            <li>
+              {/* Adicionando ícone ao lado do texto */}
+              <Link to="/cadastrar-aluno">
+                <FaUserPlus /> Cadastrar Aluno
+              </Link>
+            </li>
+            <li>
+              <Link to="/atividades">
+                <FaBook /> Atividades
+              </Link>
+            </li>
+            <li>
+              <Link to="/relatorios">
+                <FaFileAlt /> Relatórios
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -30,22 +43,29 @@ function TelaProfessor() {
           <img src={imgTeach} alt="Imagem telaProfessor" />
         </div>
         <div className="hero-text">
-          <h3>Bem-vindo à nossa plataforma</h3>
+          <h3>
+            <strong>Apoia Saber</strong>
+          </h3>
           <p>
-            A plataforma do professor foi desenvolvida para facilitar o ensino e melhorar a interação com os alunos. 
-            Aproveite a experiência.
+            A plataforma do professor foi desenvolvida para facilitar o ensino e
+            melhorar a interação com os alunos. Aproveite a experiência.
           </p>
         </div>
       </section>
 
       {/* Seção de Conteúdo sem Card */}
       <section className="content">
-        <h2>Bem-vindo à área do professor!</h2>
+        <h2>Bem-vindo à área do Professor!</h2>
         <p>
-          Esta é uma área dedicada ao professor, para que possa facilitar o aprendizado do aluno, melhorando a comunicação e orientação.
+          Página que foi especialmente desenvolvida para apoiar os professores no
+          gerenciamento e aprimoramento da experiência educacional. Aqui, você
+          pode cadastrar alunos, <br />ver relatórios das turmas e dos alunos, facilitando a criação de um ambiente de
+          aprendizado mais eficiente e envolvente para os mesmos.
         </p>
         <p>
-          Nosso objetivo é fornecer uma ótima experiência para os estudantes, com um design moderno e intuitivo.
+          Nosso compromisso é proporcionar uma experiência excepcional para os
+          estudantes, com uma interface moderna, intuitiva e fácil de usar,
+          garantindo a <br /> melhor jornada de aprendizado possível.
         </p>
       </section>
 
@@ -53,7 +73,6 @@ function TelaProfessor() {
       <Routes>
         <Route path="/cadastrar-aluno" element={<CadastrarAluno />} />
         <Route path="/atividades" element={<Atividades />} />
-       
         <Route path="/relatorios" element={<Relatorios />} />
       </Routes>
 
