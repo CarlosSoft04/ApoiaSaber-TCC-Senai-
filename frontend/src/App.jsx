@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import './styles/App.css'; // Arquivo de estilos
+import './styles/App.css'; // Arquivo de estilo
+
+
 
 // Importando os componentes para as telas e funcionalidades específicas
 import TelaProfessor from '../src/components/Professor/telaProfessor'; 
@@ -17,7 +19,7 @@ import AtividadesAluno from "../src/components/Aluno/atividadesAluno";
 function App() {
   const [isSignUp, setIsSignUp] = useState(true); 
   const navigate = useNavigate();
-
+  
   const handleToggle = () => {
     setIsSignUp(!isSignUp); 
   };
