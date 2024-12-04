@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/cadastrar-aluno.css'; // Certifique-se de que o CSS está sendo importado corretamente
+import '../../styles/Professor.css/cadastrar-aluno.css'; // Certifique-se de que o CSS está sendo importado corretamente
 
 function TelaCadastrarAluno() {
   // Estado para armazenar as informações do aluno

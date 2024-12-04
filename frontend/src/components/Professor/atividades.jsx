@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/atividades.css"; // Estilos para a tela de atividades
+import "../../styles/Professor.css/atividades.css"; // Estilos para a tela de atividades
 
 const CadastroAtividade = () => {
   const [titulo, setTitulo] = useState("");

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Para navegação
-import '../styles/atividadesAlunos.css'; // Estilos específicos para atividades
+//import '../styles/atividadesAlunos.css'; // Estilos específicos para atividades
 
 function AtividadesAluno() {
   // Estado para o formulário de atividades

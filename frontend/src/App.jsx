@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebookF, faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
-import './App.css'; // Arquivo de estilos
+import './styles/App.css'; // Arquivo de estilos
 
 // Importando os componentes para as telas e funcionalidades específicas
-import TelaProfessor from './components/telaProfessor'; 
-import CadastrarAluno from './components/cadastrar-aluno'; 
-import Atividades from './components/atividades'; 
-import Relatorios from './components/relatorios'; 
+import TelaProfessor from '../src/components/Professor/telaProfessor'; 
+import CadastrarAluno from '../src/components/Professor/cadastrar-aluno'; 
+import Atividades from '../src/components/Professor/atividades'; 
+import Relatorios from '../src/components/Professor/relatorios'; 
 
-import TelaAluno from './components/telaAluno'; // Importe a TelaAluno
-import AtividadesAluno from "./components/atividadesAluno";
+import TelaAluno from '../src/components/Aluno/telaAluno'; // Importe a TelaAluno
+import AtividadesAluno from "../src/components/Aluno/atividadesAluno";
 
 // Componente principal (App)
 function App() {
@@ -39,7 +39,7 @@ function App() {
               <a href="#" className="icon"><FontAwesomeIcon icon={faGithub} /></a>
               <a href="#" className="icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </div>
-            <span>ou use o email para se registrar</span>
+            <span style={{ fontSize: '18px' }}>ou use o email para se registrar</span>
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
@@ -50,17 +50,17 @@ function App() {
         /* Formulário de Login */
         <div className="form-container sign-in">
           <form>
-            <h1>Entrar</h1>
+            <h1 style={{ fontSize: '40px' }}>Entrar</h1>
             <div className="social-icons">
               <a href="#" className="icon"><FontAwesomeIcon icon={faGoogle} /></a>
               <a href="#" className="icon"><FontAwesomeIcon icon={faFacebookF} /></a>
               <a href="#" className="icon"><FontAwesomeIcon icon={faGithub} /></a>
               <a href="#" className="icon"><FontAwesomeIcon icon={faLinkedinIn} /></a>
             </div>
-            <span>ou use a senha do seu email</span>
+            <span style={{ fontSize: '18px' }} >ou use a senha do seu email</span>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Senha" />
-            <a href="#">Esqueci minha senha</a>
+            <a href="#" style={{ fontSize: '15px' }}>Esqueci minha senha</a>
             <button type="button" onClick={handleSignin}>Entrar</button>
           </form>
         </div>
@@ -70,14 +70,14 @@ function App() {
       <div className="toggle-container">
         <div className="toggle">
           <div className="toggle-panel toggle-left">
-            <h1>Bem-vindo de volta!</h1>
-            <p>Acesse sua conta agora mesmo e acesse o <strong>ApoiaSaber</strong> </p>
+            <h1 style={{ fontSize: '35px' }}>Bem-vindo de volta!</h1>
+            <p style={{ fontSize: '18px' }}>Acesse sua conta agora mesmo e acesse o <strong>ApoiaSaber</strong> </p>
             <button className="hidden" onClick={handleToggle}>Entrar</button>
           </div>
           <div className="toggle-panel toggle-right">
-            <h1>ApoiaSaber</h1>
-            <p>Se cadastre como aluno ou professor e acesse o  <strong>ApoiaSaber</strong> </p>
-            <button className="hidden" onClick={handleToggle}>Aluno</button>
+            <h1 style={{ fontSize: '35px' }}>ApoiaSaber</h1>
+            <p style={{ fontSize: '18px' }}>Se cadastre como aluno ou professor e acesse o  <strong>ApoiaSaber</strong> </p>
+            <button className="hidden" onClick={handleToggle} >Aluno</button>
             <button className="hidden" onClick={handleToggle}>Professor</button>
           </div>
         </div>
