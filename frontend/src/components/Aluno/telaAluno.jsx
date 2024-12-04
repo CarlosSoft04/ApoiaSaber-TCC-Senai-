@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import imgAluno from '../assets/aluno.jpg';  
-import DesempenhoAtvAlunos from '../components/desempenhoAtvAlunos';  
-import AtividadesAluno from '../components/atividadesAluno';  
+import imgAluno from '../../assets/aluno.jpg';  
+import DesempenhoAtvAlunos from '../Aluno/desempenhoAtvAlunos';  
+import AtividadesAluno from '../Aluno/atividadesAluno';  
 
 function TelaAluno() {
   return (
@@ -11,9 +11,11 @@ function TelaAluno() {
       <header className="menu">
         <nav>
           <ul className="nav-list">
-            <li><Link to="/telaAluno/atividadesAluno">Atividades</Link></li>
-            <li><Link to="/telaAluno/desempenhoAtvAlunos">Desempenho</Link></li>
-            <li><Link to="/telaAluno/relatoriosAluno">Relatórios</Link></li>
+          <li><Link to="/telaAluno/atividadesAluno">Atividades</Link></li>
+          <li><Link to="/telaAluno/desempenhoAtvAlunos">Desempenho</Link></li>
+          <li><Link to="/telaAluno/relatoriosAluno">Relatórios</Link></li>
+          <li><Link to="/telaAluno/acompanharAlunos">Acompanhar Atividades</Link></li>
+
           </ul>
         </nav>
       </header>
@@ -37,9 +39,10 @@ function TelaAluno() {
 
       {/* Definindo as Rotas Filhas */}
       <Routes>
-        <Route path="desempenhoAtvAlunos" element={<DesempenhoAtvAlunos />} />
-        <Route path="atividadesAluno" element={<AtividadesAluno />} />
-      </Routes>
+  <Route path="desempenhoAtvAlunos" element={<DesempenhoAtvAlunos />} />
+  <Route path="atividadesAluno" element={<AtividadesAluno />} />
+</Routes>
+
 
       {/* Footer */}
       <footer className="footer">

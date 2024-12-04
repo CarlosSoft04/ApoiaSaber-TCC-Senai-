@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom"; // Remover o Router aqui
-import '../styles/telaProfessor.css'; 
-import imgTeach from '../assets/teacher.jpg'; // Importando a imagem corretamente
+import '../../styles/Professor.css/telaProfessor.css'; 
+import imgTeach from '../../assets/teacher.jpg'; // Importando a imagem corretamente
 
 
-import CadastrarAluno from '../components/cadastrar-aluno';
-import Atividades from '../components/atividades';  // Importando corretamente o componente Atividades
+import CadastrarAluno from '../Professor/cadastrar-aluno';
+import Atividades from '../Professor/atividades';  // Importando corretamente o componente Atividades
 //import Turmas from '../components/turmas';          // Importando corretamente o componente Turmas
-import Relatorios from '../components/relatorios';  // Importando corretamente o componente Relatorios
+import Relatorios from '../Professor/relatorios';  // Importando corretamente o componente Relatorios
 
 function TelaProfessor() {
   return (

@@ -206,3 +206,7 @@ body{
 .container.active .toggle-right{
     transform: translateX(200%);
 }    
+
+use_email{
+    font-size: 200px;
+}
