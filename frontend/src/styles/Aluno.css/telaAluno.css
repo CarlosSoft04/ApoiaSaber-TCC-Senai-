@@ -1,0 +1,165 @@
+/* Resetando margens e preenchimento padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configurações gerais da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Menu (NavBar) */
+.menu {
+  background-color: #004279;
+  padding: 20px 50px; /* Distanciamento da margem superior e do lado */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Alinha os itens à direita */
+  gap: 50px; /* Espaçamento maior entre os itens */
+  margin: 0;
+}
+
+.nav-list li {
+  padding: 10px 0; /* Espaçamento vertical entre os itens */
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #ffcc00; /* Mudança de cor ao passar o mouse */
+}
+
+/* Seção Hero (Imagem e texto lado a lado) */
+.herrro {
+  margin-top: 140px; /* Distância da margem superior para dar espaço ao menu fixo */
+  display: flex; /* Usando Flexbox para alinhar a imagem e o texto lado a lado */
+  padding: 0 20px; /* Afastamento lateral */
+  flex-wrap: wrap; /* Permite que os itens se movam para uma nova linha em telas pequenas */
+}
+
+.herrro-image {
+  flex-shrink: 0; /* Impede que a imagem encolha */
+  margin-left: 20px; /* Afastamento da imagem da margem esquerda da tela */
+}
+
+.herrro img {
+  width: 350px; /* Aumentando o tamanho da imagem */
+  height: auto;
+  border-radius: 20px; /* Bordas arredondadas para a imagem */
+}
+
+.herrro-text {
+  margin-left: 30px; /* Afastamento entre a imagem e o texto */
+  max-width: 600px; /* Limita a largura do texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alinha o texto no centro verticalmente */
+}
+
+.herrro-text h3 {
+  font-size: 2rem;
+}
+
+.herrro-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Seção de Conteúdo sem Card */
+/* Estilo da Seção de Conteúdo */
+.conttent {
+  padding: 40px; /* Adiciona 40px de espaçamento interno ao redor do conteúdo */
+  margin-top: 30px; /* Adiciona 30px de espaço na parte superior da seção */
+  border-radius: 8px; /* Arredonda os cantos da caixa em 8px */
+}
+
+/* Estilo para o título h2 dentro da seção */
+.conttent h2 {
+  font-family: 'Arial'; /* Definir uma fonte moderna e legível */
+  font-size: 1.4rem; /* Aumenta o tamanho da fonte para dar mais destaque ao título */
+  font-weight: 700; /* Deixa o título mais espesso */
+  color: #8088dc; /* Cor de texto escuro para contraste */
+  line-height: 1.4; /* Ajusta a altura da linha para tornar o texto mais espaçado */
+  letter-spacing: 0.2px; /* Adiciona espaçamento entre as letras */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  text-align: start; /* Alinha o título no centro da página */
+}
+
+/* Estilo para os parágrafos dentro da seção */
+.conttent p {
+  font-size: 1.2rem; /* Aumenta um pouco o tamanho da fonte */
+  color: #555; /* Cor de texto cinza, mais suave para leitura */
+  line-height: 1.8; /* Aumenta a altura da linha para tornar a leitura mais confortável */
+  margin-bottom: 15px; /* Adiciona espaçamento entre os parágrafos */
+  text-align: justify; /* Justifica o texto, criando um alinhamento mais organizado */
+}
+
+/* Adiciona sombra sutil aos parágrafos para um toque mais moderno */
+.conttent p:hover {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombras leves para dar destaque ao texto ao passar o mouse */
+  transition: text-shadow 0.3s ease; /* Efeito suave na transição */
+}
+
+/* Rodapé */
+.ffooter {
+  text-align: center;
+  padding: 20px 0;
+  background-color: transparent; /* Cor de fundo do rodapé */
+  color: rgb(62, 62, 62);
+  margin-top: 40px;
+}
+
+.ffooter p {
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column; /* Muda o layout para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+    gap: 20px; /* Reduz o espaçamento entre os itens */
+  }
+
+  .herrro {
+    flex-direction: column; /* Alinha os itens em coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .herrro-image {
+    margin-left: 0; /* Remove o afastamento da imagem na tela pequena */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo da imagem */
+  }
+
+  .herrro-text {
+    margin-left: 0; /* Remove o afastamento do texto na tela pequena */
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+.nav-list li a {
+  display: flex;
+  align-items: center; /* Alinha o ícone e o texto */
+}
+
+.nav-list li a svg {
+  margin-right: 8px; /* Adiciona um espaço entre o ícone e o texto */
+  font-size: 18px; /* Ajusta o tamanho do ícone */
+}
