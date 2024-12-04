@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import { FaBook, FaChartLine, FaFileAlt, FaUsers } from 'react-icons/fa'; // Importing icons
+import { FaBook, FaChartLine, FaFileAlt } from 'react-icons/fa'; // Importing icons
 import imgAluno from '../../assets/aluno.jpg';  
 import DesempenhoAtvAlunos from '../Aluno/desempenhoAtvAlunos';  
 import AtividadesAluno from '../Aluno/atividadesAluno';  
@@ -14,13 +14,21 @@ function TelaAluno() {
         <nav>
           <ul className="nav-list">
             {/* Ajuste dos links para caminhos relativos */}
-            <li><Link to="atividadesAluno"><FaBook /> Atividades</Link></li>
-            <li><Link to="desempenhoAtvAlunos"><FaChartLine /> Desempenho</Link></li>
-            <li><Link to="relatoriosAluno"><FaFileAlt /> Relatórios</Link></li>
-            <li><Link to="acompanharAlunos"><FaUsers /> Acompanhar Atividades</Link></li>
+            <li>
+              {/* Adicionando ícone ao lado do texto */}
+              <Link to="/atividadesAluno">
+                <FaFileAlt /> Atividade
+              </Link>
+            </li>
+            <li>
+              <Link to="/desempenhoAtvAlunos">
+                <FaBook /> Desempenho
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
+
 
       {/* Seção Hero */}
       <section className="herrro">
@@ -41,8 +49,8 @@ function TelaAluno() {
 
       {/* Definindo as Rotas Filhas */}
       <Routes>
-        <Route path="desempenhoAtvAlunos" element={<DesempenhoAtvAlunos />} />
-        <Route path="atividadesAluno" element={<AtividadesAluno />} />
+        <Route path="/desempenhoAtvAlunos" element={<DesempenhoAtvAlunos />} />
+        <Route path="/atividadesAluno" element={<AtividadesAluno />} />
       </Routes>
 
       {/* Footer */}

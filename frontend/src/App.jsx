@@ -95,7 +95,7 @@ export default function AppWithRouter() {
         <Route path="/relatorios" element={<Relatorios />} />
         <Route path="/telaAluno" element={<TelaAluno />} />
         <Route path="/atividadesAlunos" element={<AtividadesAluno />} />
-        <Route path="/desempenhoAtvAlunos" element={DesempenhoAtvAlunos} />
+        <Route path="/desempenhoAtvAlunos" element={<DesempenhoAtvAlunos />} />
       </Routes>
     </Router>
   );

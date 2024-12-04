@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Para navegação
 //import '../styles/atividadesAlunos.css'; // Estilos específicos para atividades
+import '../../styles/Aluno.css/atividadesAlunos.css'
 
 function AtividadesAluno() {
   // Estado para o formulário de atividades
@@ -50,9 +51,9 @@ function AtividadesAluno() {
   return (
     <div className="AtividadesAluno">
       {/* Menu (NavBar) */}
-      <header className="menu">
+      <header className="mennu">
         <nav>
-          <ul className="nav-list">
+          <ul className="navv-list">
             <li><Link to="/aulasAluno">Aulas</Link></li>
             <li><Link to="/atividadesAluno">Atividades</Link></li>
             <li><Link to="/notasAluno">Notas</Link></li>
@@ -62,15 +63,15 @@ function AtividadesAluno() {
       </header>
 
       {/* Seção de Conteúdo */}
-      <section className="content">
+      <section className="conttttent">
         <h2>Adicionar Atividade</h2>
         <p>Preencha o formulário abaixo para anexar sua tarefa.</p>
 
         {/* Formulário de Tarefa */}
         <form onSubmit={handleSubmit}>
           {/* Campo para Título */}
-          <div className="form-group">
-            <label htmlFor="titulo">Título da Atividade</label>
+          <div className="forrrm-group">
+            <label htmlFor="ttitulo">Título da Atividade</label>
             <input
               type="text"
               id="titulo"
@@ -83,7 +84,7 @@ function AtividadesAluno() {
           </div>
 
           {/* Campo para Descrição */}
-          <div className="form-group">
+          <div className="forrrm-group">
             <label htmlFor="descricao">Descrição da Atividade</label>
             <textarea
               id="descricao"
@@ -97,7 +98,7 @@ function AtividadesAluno() {
           </div>
 
           {/* Opções de Dificuldade */}
-          <div className="form-group">
+          <div className="forrrm-group">
             <label>Dificuldade</label>
             <div>
               <label>
@@ -131,7 +132,7 @@ function AtividadesAluno() {
           </div>
 
           {/* Campo para Upload de Imagem */}
-          <div className="form-group">
+          <div className="forrrm-group">
             <label htmlFor="imagem">Imagem (opcional)</label>
             <input
               type="file"
@@ -147,7 +148,7 @@ function AtividadesAluno() {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer className="fffooter">
         <p>&copy; 2024 Todos os direitos reservados</p>
       </footer>
     </div>
