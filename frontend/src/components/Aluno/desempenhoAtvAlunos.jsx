@@ -1,21 +1,13 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-//import '../styles/desempenhoAtvAlunos.css'
+
+// Importação do CSS, conforme o conflito resolvido
+import '../../styles/Aluno.css/desempenhoAtvAlunos.css';
+
 // Registrar os componentes do Chart.js
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-=======
-import '../../styles/Aluno.css/desempenhoAtvAlunos.css'
-import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
-
-
-
->>>>>>> 23908f2bc8e3db807b1ad5f920f76e09903f3883
 const DesempenhoAtvAlunos = () => {
   // Estado para armazenar a seleção do aluno
   const [selecionado, setSelecionado] = useState('');
@@ -25,7 +17,6 @@ const DesempenhoAtvAlunos = () => {
     setSelecionado(event.target.value);
     console.log(event.target.value);  // Verifica a seleção do aluno
   };
-  
 
   // Função para gerar dados fictícios para o gráfico de desempenho do aluno
   const gerarDadosDesempenho = () => {
