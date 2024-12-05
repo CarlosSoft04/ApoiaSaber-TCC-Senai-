@@ -61,7 +61,11 @@ body {
 .hero img {
   width: 350px; /* Aumentando o tamanho da imagem */
   height: auto;
+<<<<<<< HEAD
   border-radius: 10px; /* Bordas arredondadas para a imagem */
+=======
+  border-radius: 20px; /* Bordas arredondadas para a imagem */
+>>>>>>> 23908f2bc8e3db807b1ad5f920f76e09903f3883
 }
 
 .hero-text {

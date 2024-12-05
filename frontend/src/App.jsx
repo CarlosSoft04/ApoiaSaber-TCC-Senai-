@@ -10,10 +10,10 @@ import CadastrarAluno from '../src/components/Professor/cadastrar-aluno';
 import Atividades from '../src/components/Professor/atividades'; 
 import Relatorios from '../src/components/Professor/relatorios'; 
 
-import TelaAluno from '../src/components/Aluno/telaAluno'; // Importe a TelaAluno
+import TelaAluno from './components/Aluno/telaAluno'; 
 import AtividadesAluno from "../src/components/Aluno/atividadesAluno";
+import DesempenhoAtvAlunos from "./components/Aluno/desempenhoAtvAlunos";
 
-// Componente principal (App)
 function App() {
   const [isSignUp, setIsSignUp] = useState(true); 
   const navigate = useNavigate();
@@ -91,13 +91,14 @@ export default function AppWithRouter() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<App />} /> {/* Rota principal para login/cadastro */}
-        <Route path="/telaProfessor" element={<TelaProfessor />} /> {/* Rota para a tela do professor */}
-        <Route path="/cadastrar-aluno" element={<CadastrarAluno />} /> {/* Rota para cadastro do aluno */}
-        <Route path="/atividades" element={<Atividades />} /> {/* Rota para atividades */}
-        <Route path="/relatorios" element={<Relatorios />} /> {/* Rota para relatórios */}
-        <Route path="/telaAluno" element={<TelaAluno />} /> {/* Rota para a tela do aluno */}
-        <Route path="/atividadesAlunos" element={<AtividadesAluno />} /> {/* Rota para a tela do aluno */}
+        <Route path="/" element={<App />} />
+        <Route path="/telaProfessor" element={<TelaProfessor />} />
+        <Route path="/cadastrar-aluno" element={<CadastrarAluno />} />
+        <Route path="/atividades" element={<Atividades />} />
+        <Route path="/relatorios" element={<Relatorios />} />
+        <Route path="/telaAluno" element={<TelaAluno />} />
+        <Route path="/atividadesAlunos" element={<AtividadesAluno />} />
+        <Route path="/desempenhoAtvAlunos" element={<DesempenhoAtvAlunos />} />
       </Routes>
     </Router>
   );

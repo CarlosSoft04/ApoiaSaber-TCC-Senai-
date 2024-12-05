@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = 3000; // Alterei para o valor 3000 conforme estava na versão HEAD, mas você pode ajustar conforme necessário.
 
 app.use(cors());
 
@@ -20,14 +20,14 @@ const alunoturmaRoutes = require('./routes/aluno_turma');
 
 app.use('/usuarios', usuarioRoutes);
 app.use('/alunoturma', alunoturmaRoutes);
-app.use('/anexos',anexosRoutes);
+app.use('/anexos', anexosRoutes);
 app.use('/atividades', atividadesRoutes);
 app.use('/avaliacao', avaliacaoRoutes);
 app.use('/dificuldade', dificuldadeRoutes);
 app.use('/engajamento', engajamentoRoutes);
 app.use('/estatisticas', estatisticaRoutes);
 app.use('/registro', registroRoutes);
-app.use('/turmas',turmasRoutes);
+app.use('/turmas', turmasRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
